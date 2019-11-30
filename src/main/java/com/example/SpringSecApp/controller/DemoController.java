@@ -10,6 +10,8 @@ import java.security.Principal;
 @RestController
 public class DemoController {
 
+    private final String USE_THIS_PORT = "8082";
+
     @GetMapping(path = "/")
     public String index() {
         return "<center>" +
@@ -19,7 +21,7 @@ public class DemoController {
                 "<font size=\"5\">" +
                 "<p>Hello stranger, this is a freely accessible page.</p>\n" +
                 "<p>In order to visit page for registered users, please click " +
-                "<a href=\"http://127.0.0.1:8081/users\">here</a>.</p>" +
+                "<a href=\"http://127.0.0.1:" + USE_THIS_PORT + "/users\">here</a>.</p>" +
                 "</font>" +
                 "</center>";
     }
@@ -33,7 +35,7 @@ public class DemoController {
                 "</font>" +
                 "<font size=\"5\">" +
                 "<p>Welcome " + principal.getName() + ".</p>\n" +
-                "<p>Click <a href=\"http://127.0.0.1:8081/logout\">here</a> to logout.</p>" +
+                "<p>Click <a href=\"http://127.0.0.1:" + USE_THIS_PORT + "/logout\">here</a> to logout.</p>" +
                 "</font>" +
                 "</center>";
     }
@@ -47,7 +49,7 @@ public class DemoController {
                 "</font>" +
                 "<font size=\"5\">" +
                 "<p>You've been logged out.</p>\n" +
-                "<p>Click <a href=\"http://127.0.0.1:8081/\">here</a> to go to main page.</p>" +
+                "<p>Click <a href=\"http://127.0.0.1:" + USE_THIS_PORT + "/\">here</a> to go to main page.</p>" +
                 "</font>" +
                 "</center>";
     }
