@@ -32,12 +32,6 @@ class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
         auth.authenticationProvider(keycloakAuthenticationProvider);
     }
 
-//    @Bean
-//    public KeycloakSpringBootConfigResolver KeycloakConfigResolver() {
-//        return new KeycloakSpringBootConfigResolver();
-//    }
-
-
     @Bean
     @Override
     protected SessionAuthenticationStrategy sessionAuthenticationStrategy() {
